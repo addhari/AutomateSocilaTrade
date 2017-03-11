@@ -1,0 +1,1088 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	SOCIAL TRADE BUSINESS
+</title><link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.ico" /><link href="../css/black.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 8]>
+    <link href="../style_ie8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" /><link href="../css/bootstrap.min.css" rel="stylesheet" /><link href="../font/awesome/css/font-awesome.min.css" rel="stylesheet" /><link href="../font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="http://www.fonts.googleapis.com/css?family=Varela" rel="stylesheet" type="text/css" /><link href="../css/owl.carousel.css" rel="stylesheet" type="text/css" /><link href="../css/owl.theme.css" rel="stylesheet" type="text/css" /><link href="../css/style.css" rel="stylesheet" /><link rel="stylesheet" href="../css/menu.css" /><link rel="stylesheet" type="text/css" href="../css/popup/Signup/style.css" />
+    <script src="../js/popup/Signup/jquery.min.js"></script>
+
+    
+    <script src="../js/select2/select2.full.js" type="text/javascript"></script>
+    <script src="../js/select2/prettify.min.js" type="text/javascript"></script>
+    <link href="../js/select2/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../js/popup/Signup/new.js"></script>
+    <script type="text/javascript">
+        var Mesaage = "None";
+        function popup(msg) {
+            Mesaage = msg;
+            w2popup.open({
+                body: '<div class="w2ui-centered">' + Mesaage + '</div>'
+            });
+        }
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+        });
+    
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-66437679-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    
+    <!-----------Delete Cookies------------------>
+    <script type="text/javascript">
+        var IDLE_TIMEOUT = 1200; //seconds
+        var _idleSecondsCounter = 0;
+        document.onclick = function () {
+            _idleSecondsCounter = 0;
+        };
+        document.onmousemove = function () {
+            _idleSecondsCounter = 0;
+        };
+        document.onkeypress = function () {
+            _idleSecondsCounter = 0;
+        };
+        window.setInterval(CheckIdleTime, 1000);
+
+        function CheckIdleTime() {
+            _idleSecondsCounter++;
+            var oPanel = document.getElementById("SecondsUntilExpire");
+            if (oPanel)
+                oPanel.innerHTML = (IDLE_TIMEOUT - _idleSecondsCounter) + "";
+            if (_idleSecondsCounter >= IDLE_TIMEOUT) {
+
+                document.location.href = "http://www.socialtrade.biz/logout.aspx";
+            }
+        }
+
+    </script>
+    
+    <!-----------Delete Cookies END------------>
+    <script type="text/javascript">
+        function date_time(id) {
+            date = new Date;
+            year = date.getFullYear();
+            month = date.getMonth();
+            months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+            d = date.getDate();
+            day = date.getDay();
+            days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+            h = date.getHours();
+            if (h < 10) {
+                h = "0" + h;
+            }
+            m = date.getMinutes();
+            if (m < 10) {
+                m = "0" + m;
+            }
+            s = date.getSeconds();
+            if (s < 10) {
+                s = "0" + s;
+            }
+            result = '' + days[day] + ' | ' + months[month] + ' ' + d + ' ' + year + ' | ' + h + ':' + m + ':' + s;
+            document.getElementById(id).innerHTML = result;
+            setTimeout('date_time("' + id + '");', '1000');
+            return true;
+        }
+
+    </script>
+</head>
+<body onload="load()">
+    <script>
+        function load() {
+            //register the handler
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+        }
+        //this handler will execute after a partial postback
+        function EndRequestHandler() {
+            //...arbitrary code...
+        }
+        window.onload = load; 
+    </script>
+    <form method="post" action="./TodayTask.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE3MDk4NTI4MzEPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCZg9kFgICAw9kFgICCw9kFgICBA9kFgYCAQ8PFgQeBFRleHQFywFTb3JyeSBmb3IgdGhlIGluY29udmVuaWVuY2UsIFlvdXIgQWNjb3VudCBpcyBub3QgYWN0aXZhdGVkIHlldCwgS2luZGx5IGFjdGl2YXRlIHlvdXIgYWNjb3VudCBpbiBvcmRlciB0byByZXF1ZXN0IGRhaWx5IHRhc2suIDxiciAvPiA8YSBocmVmPSdBY2NvdW50QWN0aXZhdGUuYXNweCc+Q2xpY2sgaGVyZTwvYT4gdG8gQWN0aXZhdGUgeW91ciBhY2NvdW50Lh4HVmlzaWJsZWdkZAIDDw8WAh4HRW5hYmxlZGdkZAIFD2QWAmYPZBYGAgEPPCsAEQMADxYGHgtfIURhdGFCb3VuZGceC18hSXRlbUNvdW50Zh8CaGQBEBYAFgAWAAwUKwAAZAIJDw8WAh8CaGRkAg0PZBYCAgUPZBYCAgEPPCsAEQIBEBYAFgAWAAwUKwAAZBgDBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRJbWFnZUJ1dHRvbjIFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkSW1hZ2VCdXR0b24zBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJEd2UGF5b3V0cw88KwAMAgYVAQZVc2VySUQIAv////8PZAUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkFzc2lnbm1lbnQPPCsADAIGFQEGV29ya0lECGZk/pRsgnO24RhcHVKINSWjiprxcZM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=qEIWZBSmnVmxlFDircRFsYgOx5AJZj7fDBDaOfnIiUnJEd0tU1obvC7vl2ZgPKlg5dhEGGKQ786eDjUlRvETKl3z4Wo1&amp;t=635875707181218729" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=xLFT82AdeUFbmTKQJEzV9GRwhLUNuwcns8wjF0mST8IaN6XPGobHGR9LRA1bEt4tb4-8CAKVilQvR4OoDkziSXTz8mR7j4LAUgLUUFQXNC_lxaVGM2x7siXv3XHekVYiU9uqcOocc45MaL18-WTVjXhTHU81&amp;t=1c6690ce" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=jE99Xk3jc3ItVB6im_n0O_88O4frdmlBMVTZR80B3z-9uNF_xyxvsmWBTXG-GNsoH4zUBz8uZ1q8GJJPuKuAAz0p_LQQk8Me210D5yKnAr1mhQf_zbaJ52DIAFbfWtjKDiJq3A2&amp;t=734d43f5" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=YotdPLvkzZCREYpTJtaP5AHGUddYUlSGTNRjCK4BhQ9cHQGy-PZcg1MqSe3PozY6FYbWp1QPpxwPlPqnHpx2mLGgV7J4cHtAfU2yhGtIJNZWbAYkpdJsABbXnu3N3Ji3WL_ymg2&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=I46w26RFtRhNGvkmuINAavxyWsnkOqE709bTdlG9B9JGmEyUmKcmgQpXFGHbU531EcQYCAOWxWqiiiFvbKk1ePrb12JsbU6kvN0rmlMeYyuFjbj-tcza4cRyBmJvtQ2YyyzVUg2&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=9s-e7or0gHFw4DEGP14zd4n1NEbZP2fIa6-cJBERBfuqNN9S2hwqgjik4PHdDwOgssokzMw5QWyz8STEcOhPVA2CC2p02iYTvyGHs7PC14xlVc2okduAWToJDAyguWnvwuf7yQ2&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=hrHBDCoNHlJGkIRxlY8ncHFa1mKNEReZ9tMLasCBgctA8vy6b625ZyOtomkjIGNNNFrjioIqDunXnhvbMp_qE5EWeAD9EvXgOY-KG3lW1Zt21aP75z-SR3GNSbXm9Qr1L-0cXBmpRh8x-d6QzITD6jLRHk81&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=N30qcfSTKXOV5yk8RCu8h3QcqbU0VG5swNBSlBrZ1YSty0cMGgGti1KFhrWOnlUmD0y7AiWOO4j2lE9RXcOxowSv52sovh88MhS5ZHDa7WMayr-v3IOEPwJsaWAwtlp7zYMTNw2&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2nZOLKBpOIXz94yot-bgrMqYdbVzn7JNNCU4aaNo9Qhu7bO2ddCKNBkOabWfCR20CPzSCMnYyL3Zf_Ly0lhikKmim3NQ2aNdhWgg83v8HLSyfCUo6KKJO-mvf83nzydu5tnA1M-7QrUh_XrIp4Jak5D6tUI1&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=bBMkC3nPpvMLgkAPzwKgaLRfhPyBOCU4EyEVr0VaDVS3mZgTm0OwW1P3dFOg74Lkd2tIfqMt9JYkdQi8RKJPdECmU4BSjdVqQytr3UvocLbMDxhsMgAN8CSuZKnnbUT5bMQVA7Ma0C_nm2wZmi9uP3OB0KI1&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=FMZ5aa5pMDqO3Fdls4yqJqmj67-BOE42nu39lzyTXBZaz8q2brLvUI-8A1wNxPXw_hR-PU26NwIMgJwB_XhVc-6XKihcad7oyNiNMJVoa-fhWRYJRnLG8QqHyTn-zELq8qRv1k77eK1RbZBxnXFtO7vEq4o1&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=f2pgyCGToW2lHcOpOSqn0uLQ7-ACQ9vAvFkLliO64r-GPlKpj4CLG9f41-IlNnSS5pkbdy03jaW_EA91FG2NzHUH7oDWY8OTWozWqnducAKizRglVYtAXUZ81Yf1cCX-AgrzQc1ZWyYSpDpIUg7yuBYG4rI1&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=EVG9u73p0YvG4hImL38-kwFIMqLBAZcHwOEbkTl0jz1p5pt9Usysm8vEIOyIxukM1MFpFbfyMOA7cLOggDcqUE7CKiGoUwlbdTGu3yj20kvZFZPD7n3d56zAxJIX1PXZdf8EoM-celIbXF9Lx7BF8OcbwQM1&amp;t=734d43f5" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1B901D57" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$ContentPlaceHolder1$UpPanel1',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="loading-page">
+        <img src="../images/image.gif" alt="Images-loading">
+    </div>
+    <!-- Begin section search form -->
+    <div class="tz-sign-in">
+        <div class="container">
+            <table width="100%" border="0" align="right" cellpadding="0" cellspacing="0" style="/*margin-right: 60px;*/
+                text-align: right; font-size: 12px;">
+                <tr id="ctl00_TrSignup">
+	<td width="60%" style="color: #FFF; font-family: Monotype Corsiva; text-align: left;
+                        font-size: 16px; font-weight: bold;">
+                        <span id="date_time"></span>
+                        <script type="text/javascript">                            window.onload = date_time('date_time');</script>
+                        <style>
+                            #date_time
+                            {
+                                color: #fff;
+                                font-family: Calibri;
+                                float: left;
+                                font-size: sss;
+                                font-weight: bold;
+                                padding-left: 5%;
+                            }
+                        </style>
+                    </td>
+	<td width="2%" align="center">
+                        <img src="../images/signup.png" width="15">
+                    </td>
+	<td width="2%" align="center">
+                        <a href="../signup.aspx" style="color: White;">Signup </a>
+                    </td>
+	<td width="2%" align="center">
+                        <img src="../images/login.png" width="10">
+                    </td>
+	<td width="2%" align="center">
+                        <a href="../login.aspx" style="color: White;">Login</a>
+                    </td>
+</tr>
+
+                <tr id="ctl00_TrLogOut">
+	<td align="right" style="color: #FFF; font-family: Monotype Corsiva; text-align: left;
+                        font-size: 16px; font-weight: bold;">
+                    </td>
+	<td align="right">
+                        <img src="../images/signup.png" alt="socialtrade.biz" width="15">
+                        <a href="../signup.aspx" style="color: White;">Signup </a><a style="color: White;">|
+                        </a><a href="dashboard.aspx" style="color: White;">
+                            <span id="ctl00_lblUserName"></span>
+                        </a>
+                    </td>
+	<td width="3%" align="right" valign="middle" style="width: 1%;">
+                        <div tabindex="0" class="onclick-menu">
+                            <ul class="onclick-menu-content">
+                                <a href="dashboard.aspx" style="color: #fff;">DashBoard</a><br>
+                                
+                                <a href="../ChangePassword.aspx" style="color: #fff;">Change Password</a><br>
+                                <a href="../LogOut.aspx" style="color: #fff;">Logout</a>
+                            </ul>
+                        </div>
+                    </td>
+</tr>
+
+            </table>
+        </div>
+    </div>
+    <!-- End section search form -->
+    <!-- Begin class tz-header-2 -->
+    <header class="tz-header tz-header-2" style="border: 0;">
+        <div class="tz-customer-container">
+            <div class="container">
+                <div class="tz-header-content">
+                    <h3 class="tz-logo pull-left">
+                        <a href="#"><img alt="Images Logo" src="../images/logo-header-2.png"></a>
+                    </h3>
+                    <button type="button" class="tz-button-toggle btn-navbar pull-right" data-target=".nav-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <nav class="nav-collapse pull-right">
+                        <ul class="tz-menu">
+                            <li>
+                                <a href="../Default.aspx" class="link-1">HOME</a>
+                            </li>
+                            <li>
+                                <a href="../about.aspx" class="link-1">ABOUT</a>
+                                
+                            </li>
+                             <li>
+                                        <a href="../whyus.aspx" class="link-1">WHY US</a>
+                                    </li>
+                            <li>
+                                <a href="../plans.aspx" class="link-1">PLANS</a>
+                            </li>
+                            
+                            <li>
+                                <a href="../terms_condition.aspx" class="link-1">TERMS & CONDITION</a>
+                            </li>
+                            <li>
+                                <a href="../faq.aspx" class="link-1">FAQ</a>
+                                
+                            </li>
+
+                            <li>
+                                <a href="../contact.aspx" class="link-1">CONTACT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+            </div><!-- End Content Main Header -->
+        </div>
+    </header>
+    <section>
+      <marquee style="background:#333; color:#fff; font-weight:bold; padding:5px;" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
+     W.E.F 1st August : Dear Users, Kindly note that you can upgrade your account only after 1 month of purchase, and can be upgraded within 1 Month after that. 
+   
+</marquee> 
+  
+    </section>
+    <!-- End class tz-header-2 -->
+    <div id="ctl00_noticont" style="background-color: #f3f3f3;">
+        <div id="noti">
+            <b>
+                
+                
+            </b>
+        </div>
+    </div>
+    
+    
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$HFValue" id="ctl00_ContentPlaceHolder1_HFValue" />
+ <script type="text/javascript">
+     if (window.localStorage) {
+         window.localStorage.SetItem('keyName', 'valueToUse');
+         // OR
+         window.localStorage.keyName = 'valueToUse';
+     }
+</script>
+  <script>
+      (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-66437679-1', 'auto');
+      ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    
+
+
+<script type="text/javascript">
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+    prm.add_beginRequest(beginRequest);
+
+    function beginRequest() {
+        prm._scrollPosition = null;
+    }
+</script>
+
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/json2/0.1/json2.js"></script>
+  <script type="text/javascript">
+      var likeCount = 0;
+      var PageID = 'N/A';
+      var workid = 0;
+      function GetID(url, WID) {
+          workid = WID;
+          $.ajax(
+                {
+
+                    url: 'https://graph.facebook.com/v2.4/' + url + '?fields=id,likes&access_token=503659489757215|zF6FFlWxfwgPsN9fmFP38FzX6V4',
+                    dataType: 'jsonp',
+                    success: function (response) {
+                        if (response && !response.error) {
+                            PageID = response.id;
+                            likeCount = response.likes;
+                            myWindow = window.open(url, this.href, "myWindow", "scrollbars=1,width=1024,height=700");
+                            CloseTimeout = setTimeout('CloseWindowAndGetStatus();', 60000);
+                            interval = window.setInterval(function () {
+                                try {
+                                    if (myWindow == null || myWindow.closed) {
+                                        window.clearInterval(interval);
+                                        clearTimeout(CloseTimeout);
+                                        GetLikeStatus();
+                                    }
+                                }
+                                catch (e) {
+                                }
+                            }, 1000);
+                        }
+                    }
+                }
+                );
+      }
+      function GetIDWebsite(url, WID) {
+          workid = WID;
+
+          
+
+          myWindow = window.open(url, this.href, "myWindow", "scrollbars=1,width=1024,height=700");
+//          if (url == 'https://www.youtube.com/watch?v=7qzDT36eqbo')
+//          {
+//             
+//             myWindow.document.title = "Website Popup will automatically be close after 5 Minutes. you don't need to close the popup.";
+//              CloseTimeout = setTimeout('CloseWindowAndGetStatus1();',  300000);
+
+//        }
+//          else {
+           
+             myWindow.document.title = "Website Popup will automatically be close after 20 seconds. you don't need to close the popup.";
+             CloseTimeout = setTimeout('CloseWindowAndGetStatus1();', 20000);
+        // }
+          interval = window.setInterval(function () {
+              try {
+                  if (myWindow == null || myWindow.closed) {
+                      window.clearInterval(interval);
+                      clearTimeout(CloseTimeout);
+
+
+                  }
+              }
+              catch (e) {
+              }
+          }, 1000);
+
+      }
+      function CloseWindowAndGetStatus1() {
+          clearInterval(interval);
+          myWindow.close();
+          //ShowProgress();
+          PopulateReturns();
+          fncsave();
+         
+
+      }
+
+
+      function CloseWindowAndGetStatus() {
+          clearInterval(interval);
+          myWindow.close();
+
+          GetLikeStatus();
+        
+      }
+      function CloseWindowAndGetStatusLikes() {
+          clearInterval(interval);
+          myWindow.close();
+         // ShowProgress();
+          PopulateReturnsFB();
+          fncsave();
+          
+
+      }
+      function GetLikeStatus() {
+          $.ajax({
+              url: 'https://graph.facebook.com/v2.4/' + PageID + '?fields=likes&access_token=503659489757215|zF6FFlWxfwgPsN9fmFP38FzX6V4',
+              dataType: 'jsonp',
+              success: function (response) {
+                  if (response && !response.error) {
+                      if (parseInt(response.likes, 10) > likeCount) {
+                          //ShowProgress();
+                          document.getElementById('lblAlert').innerHTML = "Liked";
+
+                          PopulateReturns();
+
+                      }
+                      else {
+                          document.getElementById('lblAlert').innerHTML = "Not Liked";
+
+                      }
+                  }
+                  else {
+                      document.getElementById('lblAlert').innerHTML = "Error Occured";
+
+                  }
+              }
+          });
+
+      }
+
+
+      function PopulateReturns() {
+          var user = {};
+          user.WorkID = workid;
+
+
+          $.ajax({
+              type: "POST",
+              url: "../User/TodayTask.aspx/SaveWork",
+              data: '{user: ' + JSON.stringify(user) + '}',
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success: function (response) {
+                
+                
+                  // alert("User has been added successfully.");
+                 // window.location.reload();
+
+              }
+          });
+          return false;
+      }
+
+
+
+      function GetPageLike(url, WID) {
+          workid = WID;
+          myWindow = window.open(url, this.href, "myWindow", "scrollbars=1,width=1024,height=700");
+          myWindow.document.title = "Facebook Page Campaign.";
+          CloseTimeout = setTimeout('CloseWindowAndGetStatusLikes();', 60000);
+          interval = window.setInterval(function () {
+              try {
+                  if (myWindow == null || myWindow.closed) {
+                      window.clearInterval(interval);
+                      clearTimeout(CloseTimeout);
+                      PopulateReturnsFB();
+                      fncsave();
+                  }
+              }
+              catch (e) {
+              }
+          }, 1000);
+
+      }
+
+      function PopulateReturnsFB() {
+          var user = {};
+          user.WorkID = workid;
+
+          $.ajax({
+              type: "POST",
+              url: "../User/TodayTask.aspx/SaveWorkFB",
+              data: '{user: ' + JSON.stringify(user) + '}',
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success: function (response) { 
+              
+
+              }
+          });
+          return false;
+      }
+
+
+     function fncsave()
+     {
+        document.getElementById('ctl00_ContentPlaceHolder1_Button2').click();
+     }
+
+
+    </script>
+    <script type="text/javascript">
+        function ShowProgressBar(div) {
+            document.getElementById(div).style.visibility = 'visible';
+        }
+            
+    </script>
+    
+<script type="text/javascript">
+    function ShowProgress() {
+        setTimeout(function () {
+            var modal = $('<div  />');
+            modal.addClass("modal232");
+            $('body').append(modal);
+            var loading = $(".loading");
+            loading.show();
+            var top = Math.max($(window).height() / 2 - loading[0].offsetHeight / 2, 0);
+            var left = Math.max($(window).width() / 2 - loading[0].offsetWidth / 2, 0);
+            loading.css({ top: top, left: left });
+
+        }, 200);
+
+
+    }
+
+    function ShowProgressRefresh() {
+        setTimeout(function () {
+            var modal = $('<div  />');
+            modal.addClass("modal2323");
+            $('body').append(modal);
+            var loading = $(".loadingrefreshing");
+            loading.show();
+            var top = Math.max($(window).height() / 2 - loading[0].offsetHeight / 2, 0);
+            var left = Math.max($(window).width() / 2 - loading[0].offsetWidth / 2, 0);
+            loading.css({ top: top, left: left });
+
+        }, 200);
+
+
+    }
+
+    function StopProgress() {
+        setTimeout(function () {
+            var modal = $('<div/>');
+            document.getElementById("123").className = "modalStop";
+            $('body').append(modal);
+        }, 100);
+
+
+    }
+</script>
+
+<style type="text/css">
+            
+    .modal
+    {
+     position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 99;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        min-height: 100%;
+        width: 100%;
+    }
+     .modal232
+    {
+     position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 99;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        min-height: 100%;
+        width: 100%;
+    }
+    
+     .modal2323
+    {
+     position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 99;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        min-height: 100%;
+        width: 100%;
+    }
+    
+    .modalStop
+    {
+     position: fixed;
+        top: 0;
+        left: 0;
+      
+    }
+    .loading
+    {
+        font-family: Arial;
+        font-size: 10pt;
+        border-radius:5px;
+        border:2px solid #000;
+        width: 200px;
+        height: 160px;
+        display: none;
+        position: fixed;
+        background-color: White;
+        z-index: 999;
+    }
+    
+    .loadingrefreshing
+    {
+        font-family: Arial;
+        font-size: 10pt;
+        border-radius:5px;
+        border:2px solid #000;
+        width: 200px;
+        height: 115px;
+        display: none;
+        position: fixed;
+        background-color: White;
+        z-index: 999;
+    }
+</style>
+    
+<div class="loading" align="center">
+    Loading. Please wait.<br />
+    <br />
+    <img src="../images/loader.gif" width="50" height"50"  />
+</div>
+
+<div class="loadingrefreshing" align="center">
+    Refreshing Please wait...<br />
+    <br />
+    <img src="../images/loader.gif" width="50" height"50"  />
+</div>
+   <!-- Begin section tz-introduce-univesity -->
+    <section class="tz-banner tz-banner-style2" style="z-index:-1;">
+        <!-- Begin class banner style-3 -->
+       <div class="profile">
+       <div class="home-title">
+					<h1>TODAY'S TASK</h1>
+				</div>
+       </div>
+        <!-- End  class banner style-3 -->
+    </section>
+    <!-- End section tz-introduce-univesity -->
+   
+
+
+<!------left side bar starts here---------->
+
+
+
+    <div class="container">
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfuserid" id="ctl00_ContentPlaceHolder1_hfuserid" />
+        <div class="row">
+        
+  
+<div id="lblAlert" style="visibility:hidden;">
+                    
+                    Not Liked
+                    
+                    </div>
+				
+            <div class="eight columns" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s" data-scroll-reveal-id="2" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true" style="float:right;">
+           <p style="float:right">  You are here : <strong><a href="dashboard.aspx">Dashboard</a></strong>&nbsp;&gt;&gt;&nbsp; Today's Work Information</p>
+            </div>
+
+				<div class="sixteen columns">
+                
+
+
+            <span id="ctl00_ContentPlaceHolder1_lblCampaignIDFB"></span>
+				<div id="ctl00_ContentPlaceHolder1_PanelAssignMEnt">
+	
+                <div ID="div1" style=" visibility:hidden; margin-left:41.5%; position:absolute; margin-top:5px;" >
+        <img src="../images/loader.gif" width="20" height"20" />
+  </div>
+                    <span id="ctl00_ContentPlaceHolder1_lblRequest" style="color:Red;font-weight:bold;">Sorry for the inconvenience, Your Account is not activated yet, Kindly activate your account in order to request daily task. <br /> <a href='AccountActivate.aspx'>Click here</a> to Activate your account.</span>
+                    
+                	         <br /> <br />
+                           
+                	         <br /> <br />
+
+                             <style type="text/css">
+
+.modalProgress
+{
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    margin-left: -90px;
+    background-color: Black;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+}
+.center
+{
+    z-index: 1000;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:18%;
+   margin-bottom:auto;
+    padding: 10px;
+    width: 150px;
+    background-color: White;
+    border-radius: 10px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -moz-opacity: 1;
+}
+.center img
+{
+    height: 88px;
+    width: 88px;
+}
+</style>
+                            
+                    
+                                              <div id="ctl00_ContentPlaceHolder1_UpPanel1">
+		
+ 
+                             
+
+        <div id="hidebtn" style="visibility:hidden;">
+ <input type="submit" name="ctl00$ContentPlaceHolder1$Button2" value="Refresh" id="ctl00_ContentPlaceHolder1_Button2" /></div>
+
+                          
+                 
+             <div ID="divSubmit" style=" visibility:hidden; margin-left:42%; position:absolute; margin-top:25px;" >
+        <img src="../images/loader.gif" width="20" height"20" />
+  </div>
+                
+                
+                
+                    <span id="ctl00_ContentPlaceHolder1_lblMessage" class="Validation"></span>
+
+                      <script type="text/javascript">
+                          function ShowProgressBar(div) {
+                              document.getElementById(div).style.visibility = 'visible';
+                          }
+            
+    </script>
+
+
+
+
+      <div id="ctl00_ContentPlaceHolder1_UpPanel">
+			
+<div id="Div2" >
+<div class="pop_main" style="border-radius:5px;">
+<table id="Table1" width="100%" class="fnt_nml_14">
+<tr>
+<td align="left"><strong></strong></td>
+<td></td>
+<td align="right"><input type="image" name="ctl00$ContentPlaceHolder1$ImageButton2" id="ctl00_ContentPlaceHolder1_ImageButton2" src="../images/close_icon1.png" style="height:25px;width:25px;    margin-top: -26px;    position: absolute;" /></td>
+</tr>
+</table>
+<div id="ctl00_ContentPlaceHolder1_Panel1" style="height:300px;overflow:auto;">
+				
+  <h4>  Congratulations, Your Work has been submitted successfully and your proforma invoice has been generated</h4> <br />
+    <div>
+
+				</div>
+        <br />
+        <div ID="div3" style=" visibility:hidden; margin-left:40%; position:absolute; margin-top:25px;" >
+        <img src="../images/loader.gif" width="20" height"20" />
+  </div>
+         <input type="submit" name="ctl00$ContentPlaceHolder1$cmdViewAll" value="View All Invoices" onclick="javascript:ShowProgressBar(&#39;div2&#39;);" id="ctl00_ContentPlaceHolder1_cmdViewAll" style="width:200px;margin-top:20px;" />
+                
+              
+
+    
+			</div>
+</div>
+</div>
+ 
+		</div>           
+
+<table>
+        <tr>
+            <td style="display:none">
+                <input type="submit" name="ctl00$ContentPlaceHolder1$button1" value="Up" id="ctl00_ContentPlaceHolder1_button1" />
+            </td>
+        </tr>
+</table>
+
+         
+	</div>
+
+
+              
+
+                
+</div>
+
+               
+								</div>
+                                </div>
+				</div>
+    <br>
+    <br>
+  
+
+ 
+
+ <div id="ctl00_ContentPlaceHolder1_Panel5">
+	
+<div id="pop-details" >
+<div class="pop_main" style="border-radius:5px;">
+<table id="Table2" width="100%" class="fnt_nml_14">
+<tr>
+<td align="left"><strong></strong></td>
+<td></td>
+<td align="right"><input type="image" name="ctl00$ContentPlaceHolder1$ImageButton3" id="ctl00_ContentPlaceHolder1_ImageButton3" src="../images/close_icon1.png" style="height:25px;width:25px;    margin-top: -26px;    position: absolute;" /></td>
+</tr>
+</table>
+
+<div id="ctl00_ContentPlaceHolder1_Panel6" style="height:300px;overflow:auto;">
+		
+  <h4> Report For 
+      <span id="ctl00_ContentPlaceHolder1_lblReportPage">Label</span> </h4> <br />
+    <textarea name="ctl00$ContentPlaceHolder1$txtRemark" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtRemark" class="txtarea" Placeholder="Enter Your Feedback About This Page Here... " style="height:100px;width:300px;">
+</textarea>
+    <br />
+
+    <span id="ctl00_ContentPlaceHolder1_rfvAdminName" class="Validation" style="display:none;">Please Enter Feedback</span>
+ 
+    
+        <br />
+        <div ID="div4" style=" visibility:hidden; margin-left:40%; position:absolute; margin-top:32px;" >
+        <img src="../images/loader.gif" width="20" height"20" />
+  </div>
+         <input type="submit" name="ctl00$ContentPlaceHolder1$cmdreport" value="Report" onclick="javascript:ShowProgressBar(&#39;div4&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$cmdreport&quot;, &quot;&quot;, true, &quot;Feedback&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_cmdreport" style="width:100px;margin-top:20px;" />
+                
+              
+
+    
+	</div>
+</div>
+</div>
+ 
+</div>           
+
+<table>
+        <tr>
+            <td style="display:none">
+                <input type="submit" name="ctl00$ContentPlaceHolder1$button3" value="Up" id="ctl00_ContentPlaceHolder1_button3" />
+            </td>
+        </tr>
+</table>
+
+   
+ 
+
+    <footer id="main-footer" style="background: url(../images/img-8.jpg) no-repeat 50% 0;
+        margin-top: 10px;">
+            
+            
+        <div id="slogan-footer">
+            <h4>Creating better <span>opportunities...!!</span>  JOIN TODAY</h4>
+        </div>
+            </footer>
+    <!-- End section tz-contact-us -->
+    <!-- Begin Footer -->
+    <footer class="tz-footer">
+        <div class="tz-footer-content tz-footer-content-2 tz-background-color-114">
+            <div class="container" align="center">
+                <ul class="tz-footer-part">
+                    <li>
+                       <div class="tz-footer-content-main">
+                            
+                            <h4>POPULAR TAGS</h4>
+                            <ul>
+
+                            <li style="color:White;">
+                                   <a href="../terms_condition.aspx" style="letter-spacing: 1px;">  Terms & Conditions</a>
+                                </li>
+
+                                <li style="color:White;">
+                                   <a href="../PrivacyPolicy.aspx" style="letter-spacing: 1px;"> Privacy Policy </a>
+                                </li>
+                                 <li style="color:White;">
+                                   <a href="../renew.aspx"> Renewal Policy </a>
+                                </li>
+                               <li style="color:White;">
+                                   <a href="../faq.aspx" style="letter-spacing: 1px;"> FAQ </a>
+                                </li>
+                                <li style="color:White;">
+                                   <a href="../ListOfHolidays.aspx" style="letter-spacing: 1px;"> Task Holidays</a>
+                                </li>
+                                 <li style="color:White;">
+                                    <a href="../monthlyrewards.aspx" style="letter-spacing: 1px;">Monthly Rewards</a>
+                                </li>
+                                <li style="color:White;">
+                                   <a href="../legalDocuments.aspx" style="letter-spacing: 1px;"> Legal Documents</a>
+                                </li>
+                                <li style="color:White;">
+                                    <a href="../neft.aspx" style="letter-spacing: 1px;">Bank Details</a>
+                                </li>
+
+                                
+                               
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tz-footer-content-main">
+                            
+                           
+                            <ul>
+                                <br>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tz-footer-content-main">
+                            
+                            <h4>CONTACT DETAILS</h4>
+                            <ul>
+                              
+                                <li><a ><strong> Customer Care : </strong> +91 8868888868</a>
+                                <br />
+                                <a  style="color:#ff9595; font-size:12px;">(Available From 10:00 AM to 5:00 PM )</a> 
+                                <br /><a  style="color:#ff9595; font-size:12px;">( Monday To Friday )</a> 
+                                </li>
+                                <li>&nbsp;</li>
+                                <li>&nbsp;</li>
+                                 <li> <address style="text-align:center; color:White; margin-top:5px;" > Copyright &copy; <a href="http://ablazeis.com/" target="_blank" style="color:White;text-decoration:none;"> Ablaze Info Solutions Private Limited  </a></address></li>
+                                <li> <a href="backlink.htm" style="color:#43A2D8; display:none;"> backlink</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </footer>
+    <a href="#" id="scroll" title="Scroll to Top" style="display: inline;">Top<span></span></a>
+    <!-- End Footer -->
+    <script>
+        var Desktop = 5,
+            tabletportrait = 2,
+            mobilelandscape = 1,
+            mobileportrait = 1,
+            resizeTimer = null;
+    </script>
+    
+
+    
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/off-canvas.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/resize.js"></script>
+    <script src="../js/custom-portfolio.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.parallax-1.1.3.js"></script>
+    <script src="../js/custom.js"></script>
+
+   
+
+
+    
+    <script type="text/javascript">
+
+        $('.selectSearch2').select2();
+        $('select').select2({
+            minimumResultsForSearch: -1,
+            placeholder: function () {
+                $(this).data('placeholder');
+            }
+        });
+        
+    </script>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_rfvAdminName"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ContentPlaceHolder1_rfvAdminName = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvAdminName"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvAdminName");
+ctl00_ContentPlaceHolder1_rfvAdminName.controltovalidate = "ctl00_ContentPlaceHolder1_txtRemark";
+ctl00_ContentPlaceHolder1_rfvAdminName.focusOnError = "t";
+ctl00_ContentPlaceHolder1_rfvAdminName.errormessage = "Please Enter Feedback";
+ctl00_ContentPlaceHolder1_rfvAdminName.display = "Dynamic";
+ctl00_ContentPlaceHolder1_rfvAdminName.validationGroup = "Feedback";
+ctl00_ContentPlaceHolder1_rfvAdminName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvAdminName.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_ContentPlaceHolder1_ImageButton2","PopupControlID":"ctl00_ContentPlaceHolder1_UpPanel","dynamicServicePath":"/User/TodayTask.aspx","id":"ctl00_ContentPlaceHolder1_ModalPopPanel"}, null, null, $get("ctl00_ContentPlaceHolder1_button1"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvAdminName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvAdminName'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_ContentPlaceHolder1_ImageButton3","PopupControlID":"ctl00_ContentPlaceHolder1_Panel5","dynamicServicePath":"/User/TodayTask.aspx","id":"ctl00_ContentPlaceHolder1_ModalPopupExtender1"}, null, null, $get("ctl00_ContentPlaceHolder1_button3"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
